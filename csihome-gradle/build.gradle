@@ -1,4 +1,4 @@
-group 'net.famunity.csihome.trial'
+group 'net.famunity.csihome.gradle'
 version '0.0.1-SNAPSHOT'
 
 buildscript {
