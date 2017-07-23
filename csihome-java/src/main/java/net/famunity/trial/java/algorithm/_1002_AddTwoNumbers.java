@@ -5,7 +5,7 @@ import java.util.Stack;
 /*
    (2->4->1) + (5->6->4) = (7->0->6)
  */
-public class _102_AddTwoNumbers {
+public class _1002_AddTwoNumbers {
     public static void main(String[] args) {
         ListNode l1e1 = new ListNode(2);
         ListNode l1e2 = new ListNode(4);
