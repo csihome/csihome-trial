@@ -10,11 +10,11 @@ import java.util.Map;
  * Given an array of integers, return INDICES of the two numbers such that they add up to a specific target.
  * You may assume that each input would have exactly one solution, and you may not use the same element twice.
  */
-public class _101_SumTwo {
+public class _1001_SumTwo {
 
     public static void main(String[] args) {
 
-        _101_SumTwo a1SumTwo = new _101_SumTwo();
+        _1001_SumTwo a1SumTwo = new _1001_SumTwo();
 
         int[] nums = new int[] {15, 2, 11, 2};
         int target = 4;

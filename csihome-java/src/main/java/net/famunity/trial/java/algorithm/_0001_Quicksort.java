@@ -1,6 +1,6 @@
 package net.famunity.trial.java.algorithm;
 
-public class _001_Quicksort {
+public class _0001_Quicksort {
     public static void main(String[] args) {
 
         int[] nums = new int[] {1, 12, 5, 26, 7, 14, 3, 7, 2};

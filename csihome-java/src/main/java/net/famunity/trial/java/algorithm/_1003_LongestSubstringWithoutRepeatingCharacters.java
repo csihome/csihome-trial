@@ -13,7 +13,7 @@ import java.util.Set;
  * Given "pwwkew", the answer is "wke", with the length of 3.
  * Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
-public class _103_LongestSubstringWithoutRepeatingCharacters {
+public class _1003_LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         String s = "abcabcdbb";
         System.out.println(lengthOfLongestSubstringSet(s));
