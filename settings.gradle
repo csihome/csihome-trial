@@ -1,3 +1,4 @@
 include 'csihome-gradle'
 include 'csihome-java'
-include 'csihome-spring'
+include 'csihome-spring-jms'
+
