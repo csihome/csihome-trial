@@ -26,43 +26,39 @@ public class Solution4 {
             String[] tokens = s.split("\\s");
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
             LocalDateTime dateTime = LocalDateTime.parse(tokens[2] + " " + tokens[3], formatter);
-            photoList.add(new Photo(photoNumber, tokens[0], tokens[1].substring(0, tokens[1].lastIndexOf(',')), dateTime)); photoNumber++; }
-            Collections.sort(photoList,new PhotoComparator());
-            Map<String, List<Photo>> map = new HashMap();
-            for (Photo photo : photoList) {
-                String city = photo.city;
-                if (map.containsKey(city)) {
-                    List list = map.get(city); list.add(photo);
-                } else {
-                    List list = new ArrayList<>();
-                    list.add(photo);
-                    map.put(city, list);
-                }
+            photoList.add(new Photo(photoNumber, tokens[0], tokens[1].substring(0, tokens[1].lastIndexOf(',')), dateTime)); photoNumber++;
+        }
+        Collections.sort(photoList,new PhotoComparator());
+        Map<String, List<Photo>> map = new HashMap();
+        for (Photo photo : photoList) {
+            String city = photo.city;
+            if (map.containsKey(city)) {
+                List list = map.get(city); list.add(photo);
+            } else {
+                List list = new ArrayList<>();
+                list.add(photo);
+                map.put(city, list);
             }
-            photoList.clear();
-            map.forEach((k, v) -> Collections.sort(v, new PhotoComparator()));
-            for (String city : map.keySet()) {
-                List<Photo> sortedPhoto = map.get(city);
-                int digits = getSize(sortedPhoto.size());
-                int number = 1;
-                for (Photo p : sortedPhoto) {
-                    p.setName(p.getCity() + leadZeros(number, digits) + p.getName().substring(p.getName().lastIndexOf(".")));
-                    number++; photoList.add(p);
-                }
+        }
+        photoList.clear();
+        map.forEach((k, v) -> Collections.sort(v, new PhotoComparator()));
+        for (String city : map.keySet()) {
+            List<Photo> sortedPhoto = map.get(city);
+            int digits = getSize(sortedPhoto.size());
+            int number = 1;
+            for (Photo p : sortedPhoto) {
+                p.setName(p.getCity() + leadZeros(number, digits) + p.getName().substring(p.getName().lastIndexOf(".")));
+                number++;
+                photoList.add(p);
             }
-            Collections.sort(photoList, (mcc1, mcc2) -> {
-                return Integer.valueOf(mcc1.getId()).compareTo(mcc2.getId());
-            });
+        }
+        Collections.sort(photoList, (mcc1, mcc2) -> {
+            return Integer.valueOf(mcc1.getId()).compareTo(mcc2.getId());
+        });
 
-//            Collections.sort(photoList, new Comparator() {
-//                @Override public int compare(final Photo mcc1, final Photo mcc2) {
-//                    // TODO Implement this method
-//                    return Integer.valueOf(mcc1.getId()).compareTo(mcc2.getId());
-//                }
-//            });
-            System.out.println("**********");
-            photoList.forEach((p) -> System.out.println(p.getName()));
-            return photoList.stream() .map(c -> c.getName()) .collect(Collectors.joining("\n")) .toString();
+        System.out.println("**********");
+        photoList.forEach((p) -> System.out.println(p.getName()));
+        return photoList.stream() .map(c -> c.getName()) .collect(Collectors.joining("\n")) .toString();
     }
 
     public static String leadZeros(int number, int size) {
