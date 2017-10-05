@@ -1,4 +1,4 @@
-package net.famunity.trial.java.leetcode;
+package net.famunity.trial.java.algorithm;
 
 public class _0004_UniqueNumberFromArray {
     public static void main(String[] args) {

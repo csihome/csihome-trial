@@ -19218,7 +19218,7 @@ module.exports = function setupParser(Processing, options) {
     * hint(ENABLE_DEPTH_TEST), but note that with the depth buffer cleared, any 3D drawing that happens later in
     * draw() will ignore existing shapes on the screen.
     * hint(ENABLE_DEPTH_SORT) - Enable primitive z-sorting of triangles and lines in P3D and OPENGL. This can slow
-    * performance considerably, and the leetcode is not yet perfect. Restore the default with hint(DISABLE_DEPTH_SORT).
+    * performance considerably, and the algorithm is not yet perfect. Restore the default with hint(DISABLE_DEPTH_SORT).
     * hint(DISABLE_OPENGL_ERROR_REPORT) - Speeds up the OPENGL renderer setting by not checking for errors while
     * running. Undo with hint(ENABLE_OPENGL_ERROR_REPORT).
     * As of release 0149, unhint() has been removed in favor of adding additional ENABLE/DISABLE constants to reset

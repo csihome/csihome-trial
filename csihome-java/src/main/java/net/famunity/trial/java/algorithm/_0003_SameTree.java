@@ -1,4 +1,4 @@
-package net.famunity.trial.java.leetcode;
+package net.famunity.trial.java.algorithm;
 
 public class _0003_SameTree {
     public static void main(String[] args) {

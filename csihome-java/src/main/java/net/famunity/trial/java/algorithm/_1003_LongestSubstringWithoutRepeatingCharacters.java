@@ -1,4 +1,4 @@
-package net.famunity.trial.java.leetcode;
+package net.famunity.trial.java.algorithm;
 
 import java.util.HashMap;
 import java.util.HashSet;
