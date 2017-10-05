@@ -1,4 +1,4 @@
-package net.famunity.trial.java.algorithm;
+package net.famunity.trial.java.leetcode;
 
 import static java.util.Arrays.binarySearch;
 
